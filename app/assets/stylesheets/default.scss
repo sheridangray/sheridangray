@@ -1,2 +1,15 @@
+@import "bootstrap-sprockets";
 @import "bootstrap";
 
+html, body {
+  font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #f3f3f4;
+  color: #676a7c;
+  height: 100%;
+}
+
+
+
+.box {
+  border: 1px dotted red;
+}

@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Sheridangray</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
+<%= render 'shared/head' %>
+
 <body>
+
+<%= render 'shared/nav_header' %>
 
 <%= render 'shared/errors_and_alerts' %>
 
-<%= yield %>
+<div class="container-fluid">
+
+  <%= yield %>
+
+</div>
 
 </body>
 </html>

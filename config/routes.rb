@@ -1,11 +1,20 @@
 Rails.application.routes.draw do
 
+  get 'static_pages/contact'
+
   # You can have the root of your site routed with "root"
   root 'static_pages#home'
 
   # Static Pages
   get '/bio' => 'static_pages#bio'
   get '/resume' => 'static_pages#resume'
+
+  # Devise
+  
+  devise_for :users
+  devise_scope :user do get "/login", to: "devise/sessions#new" end
+  devise_scope :user do get "/logout", to: "devise/sessions#destroy" end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
