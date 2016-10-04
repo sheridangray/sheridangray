@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require default.scss
+ *= require tether
  *= require_tree .
  *= require_self
  */
