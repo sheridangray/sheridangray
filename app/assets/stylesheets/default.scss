@@ -1,15 +1,38 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "bootstrap-datetimepicker";
+@import "jasny-bootstrap";
 
 html, body {
   font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #f3f3f4;
-  color: #676a7c;
+  // color: #676a7c;
   height: 100%;
 }
 
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #717173;
+}
 
+.btn {
+  a {
+    color: #ffffff; 
+  }
+
+  a:visited {
+    color: #ffffff;
+  }  
+}
+
+.upload-widget {
+  background: blue;
+}
 
 .box {
   border: 1px dotted red;
+}
+
+.content-inner {
+  background-color: #fff;
+  padding: 20px;
 }

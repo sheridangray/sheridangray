@@ -1,0 +1,36 @@
+<h2 class="page-title">Let’s build you the perfect wardrobe - and keep it that way</h2>
+
+<div class="content-inner">
+  <div class="form-wrapper">
+    <%= form_for [@wardrobe] do |f| %>
+      <div class="form-group">
+        <%= f.label :style_id, class: "sr-only" %>
+        <%= f.select :style_id, Style.all.collect {|t| [t.name, t.id]}, multiple: false, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :style_description, class: "sr-only" %>
+        <p id="style_description" class="form-control-static"></p>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :annual_income %>
+        <%= f.text_field :annual_income, type: :number, value: 70000, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :family_size %>
+        <%= f.text_field :family_size, type: :number, value: 1, min: 1, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :monthly_budget %>
+        <p id="wardrobe_monthly_budget" class="form-control-static">13</p>
+      </div>
+
+      <div class="clearfix">
+        <%= f.submit 'Add Clothes', class: "btn btn-primary pull-right" %>
+      </div>
+    <% end %>
+  </div>
+</div>

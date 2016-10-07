@@ -11,7 +11,58 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161004221957) do
+ActiveRecord::Schema.define(version: 20161006173817) do
+
+  create_table "clothing_items", force: :cascade do |t|
+    t.integer  "wardrobe_id"
+    t.integer  "clothing_type_id"
+    t.date     "purchased_on"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  add_index "clothing_items", ["clothing_type_id"], name: "index_clothing_items_on_clothing_type_id"
+  add_index "clothing_items", ["wardrobe_id"], name: "index_clothing_items_on_wardrobe_id"
+
+  create_table "clothing_type_categories", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "sort_order"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "clothing_types", force: :cascade do |t|
+    t.string  "name"
+    t.text    "description"
+    t.integer "sort_order"
+    t.integer "clothing_type_category_id"
+    t.string  "image_url"
+    t.integer "expected_months_to_expire"
+  end
+
+  add_index "clothing_types", ["clothing_type_category_id"], name: "index_clothing_types_on_clothing_type_category_id"
+
+  create_table "ideal_wardrobe_items", force: :cascade do |t|
+    t.integer "amount"
+    t.integer "clothing_type_id"
+    t.integer "style_id"
+  end
+
+  add_index "ideal_wardrobe_items", ["clothing_type_id"], name: "index_ideal_wardrobe_items_on_clothing_type_id"
+  add_index "ideal_wardrobe_items", ["style_id"], name: "index_ideal_wardrobe_items_on_style_id"
+
+  create_table "styles", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "sort_order"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -32,5 +83,18 @@ ActiveRecord::Schema.define(version: 20161004221957) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "wardrobes", force: :cascade do |t|
+    t.integer  "style_id"
+    t.integer  "annual_income"
+    t.integer  "family_size"
+    t.integer  "user_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "monthly_budget"
+  end
+
+  add_index "wardrobes", ["style_id"], name: "index_wardrobes_on_style_id"
+  add_index "wardrobes", ["user_id"], name: "index_wardrobes_on_user_id"
 
 end

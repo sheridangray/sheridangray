@@ -26,14 +26,22 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '>= 3.2'
+gem 'jasny-bootstrap-rails'
 
 gem 'devise'
+
+gem 'paperclip'
+
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.42'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Puma as the app server
 gem 'puma'
+
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -47,5 +55,9 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'rb-readline'
+
+  gem 'faker'
 end
 

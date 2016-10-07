@@ -1,0 +1,46 @@
+// Place all the styles related to the ClothingItems controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// input[type="file"] {
+//   // display: none;
+// }
+
+.card {
+  margin: 15px;
+  border: #717173 thin solid;
+  
+  .card-image {
+      margin: 0 auto;
+      max-height: 200px;
+    }
+
+  @media (min-width: 544px) {
+    .card-image {
+      max-width: 100%;
+      max-height: 200px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .card-image {
+      max-height: 145px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .card-image {
+      max-width: 100%;
+      max-height: 180px;
+    }
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+
+  .actions {
+    padding: 10px 0px;
+  }
+}

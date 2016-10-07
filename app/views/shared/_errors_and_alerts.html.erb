@@ -1,7 +1,15 @@
 <% if flash[:notice] %>
-  <div class="notice"><%= flash[:notice] %></div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="notice"><%= flash[:notice] %></div>
+    </div>
+  </div>
 <% end %>
 
 <% if flash[:alert] %>
-  <div class="alert"><%= flash[:alert] %></div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="alert"><%= flash[:alert] %></div>
+    </div>
+  </div>
 <% end %>

@@ -1,0 +1,66 @@
+<div class="container">
+  
+  <div class="row">
+    <div class="col-md-12">
+      <header><h2 class="page-title">Your wardrobe</h2></header> 
+    </div>
+  </div>
+
+  <div class="content-inner">
+    <% @clothing_type_categories.each do |category| %>
+      
+      <div class="row">
+        <div class="col-md-12">
+          <h3><%= category.name %></h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <% @wardrobe.clothing_items.each do |clothing_item| %>
+          <% if clothing_item.clothing_type.clothing_type_category == category %>
+            <%= link_to edit_clothing_item_path(clothing_item.id) do %>
+              <div class="card col-sm-5 col-md-3">
+                <div class="card-block">
+                  <h4 class="card-title"><%= clothing_item.clothing_type.name %></h4>
+                  <h6 class="card-subtitle text-muted">
+                    <% if clothing_item.purchased_on %>
+                      <% if clothing_item.status == "Good" %>
+                        <b class="text-success"><%= "#{clothing_item.status}" %></b><small> <%= "#{time_until(clothing_item.depreciates_on)}" %></small>
+                      <% else %>
+                        <b class="text-danger"><%= "#{clothing_item.status}" %></b><small> <%= "#{time_ago(clothing_item.depreciates_on)}" %></small>
+                      <% end %>
+                    <% else %>
+                      <p>Need to acquire</p>
+                    <% end %>
+                  </h6>
+                </div>
+                <%= image_tag clothing_item.image.url, alt: "Card Image", class: "card-image center-block" %>
+                <div class="card-block actions">
+                  <% if clothing_item.purchased_on %>
+                    <div class="clearfix">
+                      <%= link_to "Retire Piece", clothing_item_path(clothing_item.id), method: :delete, class: "btn btn-danger pull-right" %>
+                    </div>
+                  <% else %>
+                    <%= link_to "Buy", "http://www.google.com/search?q=#{clothing_item.clothing_type.name}", class: "btn btn-primary" %>
+                    <%= link_to "Already Own", edit_clothing_item_path(clothing_item.id), class: "btn btn-info" %>
+                  <% end %>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+
+    <% end %>
+
+    <%= form_for [@wardrobe] do |f| %>
+      <div class="form-group clearfix">
+        <%= link_to 'Delete Wardrobe', @wardrobe, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger pull-right" %>
+      </div>
+    <% end %>
+
+  </div>
+
+  
+
+</div>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  style_id: 
+  annual_income: 1
+  family_size: 1
+  user_id: 
+
+two:
+  style_id: 
+  annual_income: 1
+  family_size: 1
+  user_id: 
