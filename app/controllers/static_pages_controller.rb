@@ -1,13 +1,11 @@
 class StaticPagesController < ApplicationController
 
-  layout 'cover'
-
   def home
+    render layout: 'cover'
   end
 
-  def bio
+  def about
+    render layout: 'application'
   end
 
-  def resume
-  end
 end

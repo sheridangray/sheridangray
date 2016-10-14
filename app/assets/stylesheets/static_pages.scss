@@ -1,0 +1,49 @@
+@import "colors";
+
+h1 {
+  font-size: 40px;
+}
+
+.cover {
+  background-image: url('yosemite-xl.png');
+  background-position: center top; 
+}
+
+
+
+.site-description {
+  margin: 64px 0px;
+  color: $off-white;
+  text-shadow: 2px 2px $primary-color;
+}
+
+.site-actions {
+  margin-top: 24px; 
+
+  img {
+    height: 90px;
+    width: 90px;
+  }
+
+  p {
+    margin-top: 32px;
+    font-size: 36px;
+    color: $off-white;
+    text-shadow: 2px 2px $primary-color;  
+  }
+  
+}
+
+@media (min-width: 544px) {
+
+  .site-title {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 54px;
+  }
+
+  h1 {
+    font-size: 56px;
+  }
+
+}

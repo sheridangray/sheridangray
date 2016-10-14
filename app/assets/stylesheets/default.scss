@@ -2,37 +2,183 @@
 @import "bootstrap";
 @import "bootstrap-datetimepicker";
 @import "jasny-bootstrap";
+@import "colors";
 
 html, body {
   font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #f3f3f4;
-  // color: #676a7c;
   height: 100%;
-}
-
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  color: #717173;
-}
-
-.btn {
-  a {
-    color: #ffffff; 
-  }
-
-  a:visited {
-    color: #ffffff;
-  }  
-}
-
-.upload-widget {
-  background: blue;
+  background-image: linear-gradient(90deg, #B7B1A6, #B9AA96);
+  color: $primary-color;
 }
 
 .box {
-  border: 1px dotted red;
+  border: 1px red dotted;
+}
+
+.title {
+  margin-left: 12px;
+}
+
+.navbar {
+  margin: 20px 0px;
+}
+
+.navbar-default {
+  background-color: transparent;
+  border: none;
+  font-size: 32px;
+  margin: 24px 16px;
+
+  .navbar-collapse {
+    margin-top: 4px;
+    border-radius: 5px;
+    border: 6px $primary-color solid;
+    box-shadow: none;
+    text-align: center;
+    background-color: $off-white;
+  }
+
+  a {
+    color: $primary-color;
+  }
+
+  a:hover {
+    color: darken($primary-color, 10%); 
+    text-decoration: none;
+  }
+
+  a:focus {
+    text-decoration: none;
+  }
+
+  .navbar-toggle {
+    margin: 0px;
+    border: 6px $primary-color solid;
+    margin-top: 4px;
+  }
+
+  .navbar-toggle:hover {
+    background-color: $off-white;
+  }
+
+  .navbar-toggle:focus {
+    background-color: transparent;
+  }
+
+  .navbar-nav > li {
+    font-size: 20px;
+    letter-spacing: 5px;  
+  }
+
+  .navbar-nav > li > a {
+    .current {
+      color: $yellow;
+    }
+  }
+}
+
+.current {
+  color: $yellow !important;
+}
+
+footer {
+
+  .login-links {
+    margin: 4px 20px;  
+  }
+  
+
+  a {
+    color: $primary-color;
+  }
+
+  a:hover {
+    color: $primary-color;
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+.content {
+  background-color: #D1CCC5;
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+
+.content-header {
+  vertical-align: middle;
+  border-radius: 10px;
+  height: 100%;
 }
 
 .content-inner {
-  background-color: #fff;
-  padding: 20px;
+  margin-top: 20px;
 }
+
+.social {
+  margin: 0px;
+  padding: 0px;
+  margin-top: 20px;
+
+  .social-icon {
+    padding: 0px 10px;
+  }
+}
+
+h1, h3, h4, h5, h6 {
+  letter-spacing: 8px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media (min-width: 544px) {
+  h2 {
+    font-size: 36px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 2px;
+  }
+}
+
+a {
+  color: #62B298;
+}
+
+a:hover {
+  color: #62B298;
+}
+
+.login-links {
+  margin-top: 16px;
+}
+
+.field {
+  margin: 16px 0px;
+}
+
+.form-control {
+  border: rgba(120, 117, 111, 0.8) solid 3px;
+}
+
+.form-control:focus {   
+    border-color: rgba(120, 117, 111, 0.8);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(229, 103, 23, 0.6);
+    outline: 0 none;
+}
+
+.alerts_and_notices {
+  text-align: center;
+}
+

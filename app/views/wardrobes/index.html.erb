@@ -1,20 +1,23 @@
 <div class="container">
-  <header>
-    <h2 class="page-title">Creating a function for my Wardrobe <strike>Mal</strike>function</h2>
-  </header> 
-  <div class="row">
-    <div class="col-md-6">
-      <p>I'll admit it - I have a problem with clothes. I don't enjoy shopping for them. It overwhelms me.</p>
-      <p>But I don't want to look totally unstylish.</p>
-      <p>So, in the way that I do, I looked for ways to optimize and solve my problem.</p>
-      <p>I realized that because I didn't enjoy the activity of shopping, I never prompted myself to go. I never wake up and tell myself that today is a good day to go to the mall...</p>
-      <p>What I needed was an external impetus. But, I didn't want to rely on my friends telling me that my clothes were getting ratty. That would have meant I waited too long.</p>
-      <p>So, I built a depreciation schedule for my clothes and a cron job to monitor for when I need to buy something new.</p>
-      <%= link_to "Let's get started!", new_wardrobe_path %>
+  <div class="content">
+    <div class="row content-header"> 
+      <div class="col-xs-12">
+        <h2>Creating a function for my wardrobe <strike>mal</strike>function</h2>
+      </div>
     </div>
-    <div class="col-md-6">
-      <%= image_tag("hyperventalating.gif") %>
+    <div class="row content-inner">
+      <div class="col-xs-12">
+        <p>
+          I'll admit it - I have a problem with clothes. I don't enjoy shopping for them. It overwhelms me. I walk into the a store looking for a shirt and see a flood of options. How do I know that this is the right shirt? Does this color look good on me? For that matter do I even have a color? I don't know any of these things and get stressed when I don't know how to resolve something in my head. So shopping for clothes has never been fun for me.
+        </p>
+        <p>
+          Because I never wake up and tell myself that today is a good day to go to the mall and buy clothes, I never do. And then my friends end up telling me I look like crap and need to figure something out.
+        </p>
+        <p>
+          So, I built a depreciation schedule for my clothes and a cron job to monitor for clothing items that need to be replaced.
+        </p>
+        <%= link_to "Check out the project", new_wardrobe_path, class: "btn btn-lg btn-primary" %>
+      </div>
     </div>
-  </div>
   </div>
 </div>

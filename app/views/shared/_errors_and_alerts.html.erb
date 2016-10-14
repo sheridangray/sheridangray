@@ -1,15 +1,17 @@
-<% if flash[:notice] %>
-  <div class="row">
-    <div class="col-md-12">
-      <div class="notice"><%= flash[:notice] %></div>
+<div class="container alerts_and_notices">
+  <% if flash[:notice] %>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="notice"><%= flash[:notice] %></div>
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
 
-<% if flash[:alert] %>
-  <div class="row">
-    <div class="col-md-12">
-      <div class="alert"><%= flash[:alert] %></div>
+  <% if flash[:alert] %>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="alert"><%= flash[:alert] %></div>
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>

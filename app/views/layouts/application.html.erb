@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <%= render 'shared/head' %>
 
 <body>
 
-<%= render 'shared/nav_header' %>
+<%= render 'shared/nav_header_application' %>
 
-<div class="container">
-  <%= render 'shared/errors_and_alerts' %>
-  <%= yield %>
-</div>
+<%= render 'shared/errors_and_alerts' %>
+
+<%= yield %>
+
+<%= render 'shared/footer' %>
 
 </body>
 </html>

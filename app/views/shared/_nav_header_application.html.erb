@@ -1,0 +1,19 @@
+<div class="container">
+
+  <%= render 'shared/nav_header_xs' %>
+
+  <nav class="navbar navbar-default hidden-xs">
+
+    <%= link_to root_path class: "navbar-brand" do %>
+      <%= image_tag 'logo-big' %>
+      <span class="title">Gray Space</span>
+    <% end %>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li><%= link_to 'About', about_path, class: "#{current_path(about_path)}" %></li>
+      <li><%= link_to 'Projects', projects_path, class: "#{current_path(projects_path)}" %></li>
+      <li class="nav-item nav-link"><%= link_to 'Writings', about_path %></li>
+    </ul>      
+  </nav>
+  
+</div>

@@ -1,0 +1,33 @@
+<nav class="navbar navbar-default visible-xs">
+
+  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <%= link_to root_path do %>
+      <%= image_tag 'logo-big' %>
+      <span class="title">Gray Space</span>
+  <% end %>
+
+  <div class="row">
+    <div class="col-xs-6 pull-right">
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><%= link_to 'About', about_path, class: "#{current_path(about_path)}" %></li>
+          <li><%= link_to 'Projects', projects_path, class: "#{current_path(projects_path)}" %></li>
+          <li><a href="#">Writings</a></li>
+          <% if current_page?(root_url) %>
+            <% if user_signed_in? %>
+              <li class="nav-item nav-link"><%= link_to 'Logout', logout_path %></li>
+            <% else %>
+              <li class="nav-item nav-link"><%= link_to 'Login', login_path %></li>
+            <% end %>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</nav>

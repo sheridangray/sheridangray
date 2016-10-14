@@ -10,13 +10,16 @@ Rails.application.routes.draw do
   devise_scope :user do get "/logout", to: "devise/sessions#destroy" end
 
   # Static Pages
-  get '/bio', to: 'static_pages#bio'
-  get '/resume', to: 'static_pages#resume'
-  get '/contact', to: 'static_pages#contact'
+  get '/about', to: 'static_pages#about'
+  get 'projects/', to: 'projects#index'
 
   # Resources 
-  resources :projects
-  resources :wardrobes
+
+  scope :projects do
+    resources :wardrobes
+  end
+
+  
   resources :clothing_items, except: [:show, :index]
   resources :styles, only: [:show]
 

@@ -11,18 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161006173817) do
+ActiveRecord::Schema.define(version: 20161013234034) do
 
   create_table "clothing_items", force: :cascade do |t|
     t.integer  "wardrobe_id"
     t.integer  "clothing_type_id"
     t.date     "purchased_on"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "expected_months_to_expire"
   end
 
   add_index "clothing_items", ["clothing_type_id"], name: "index_clothing_items_on_clothing_type_id"
@@ -92,6 +93,7 @@ ActiveRecord::Schema.define(version: 20161006173817) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.integer  "monthly_budget"
+    t.integer  "workouts"
   end
 
   add_index "wardrobes", ["style_id"], name: "index_wardrobes_on_style_id"
