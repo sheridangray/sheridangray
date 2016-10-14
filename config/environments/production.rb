@@ -25,7 +25,7 @@ Rails.application.configure do
   # config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # todo: Figure out how to use a CDN
-  config.serve_static_assets = true
+  config.serve_static_files = true
 
 
   # Compress JavaScripts and CSS.
