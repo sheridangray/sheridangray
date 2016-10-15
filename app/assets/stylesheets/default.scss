@@ -15,59 +15,60 @@ html, body {
   border: 1px red dotted;
 }
 
-.navbar {
-  // margin: 20px 0px;
+.title {
+  margin-left: 12px;
+}
 
-  .navbar-default {
-    // background-color: transparent;
-    // border: none;
-    // margin: 24px 16px;
+.navbar-default {
+  background-color: transparent;
+  border: none;
+  font-size: 28px;
+  margin: 24px 16px;
 
-    .navbar-collapse {
-      margin-top: 4px;
-      border-radius: 5px;
-      border: 6px $primary-color solid;
-      box-shadow: none;
-      text-align: center;
-      background-color: $off-white;
-    }
+  .navbar-collapse {
+    margin-top: 4px;
+    border-radius: 5px;
+    border: 6px $primary-color solid;
+    box-shadow: none;
+    text-align: center;
+    background-color: $off-white;
+  }
 
-    a {
-      color: $primary-color;
-    }
+  a {
+    color: $primary-color;
+  }
 
-    a:hover {
-      color: darken($primary-color, 10%); 
-      text-decoration: none;
-    }
+  a:hover {
+    color: darken($primary-color, 10%); 
+    text-decoration: none;
+  }
 
-    a:focus {
-      text-decoration: none;
-    }
+  a:focus {
+    text-decoration: none;
+  }
 
-    .navbar-toggle {
-      margin: 0px;
-      border: 6px $primary-color solid;
-      margin-top: 4px;
-    }
+  .navbar-toggle {
+    margin: 0px;
+    border: 6px $primary-color solid;
+    margin-top: 4px;
+  }
 
-    .navbar-toggle:hover {
-      background-color: $off-white;
-    }
+  .navbar-toggle:hover {
+    background-color: $off-white;
+  }
 
-    .navbar-toggle:focus {
-      background-color: transparent;
-    }
+  .navbar-toggle:focus {
+    background-color: transparent;
+  }
 
-    .navbar-nav > li {
-      font-size: 20px;
-      letter-spacing: 5px;  
-    }
+  .navbar-nav > li {
+    font-size: 20px;
+    letter-spacing: 5px;  
+  }
 
-    .navbar-nav > li > a {
-      .current {
-        color: $yellow;
-      }
+  .navbar-nav > li > a {
+    .current {
+      color: $yellow;
     }
   }
 }
@@ -177,6 +178,3 @@ a:hover {
   text-align: center;
 }
 
-.title {
-  margin-left: 12px;
-}
