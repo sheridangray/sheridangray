@@ -41,6 +41,8 @@ gem 'bootstrap3-datetimepicker-rails', '~> 4.17.42'
 # Use Puma as the app server
 gem 'puma'
 
+# Amazon Email
+gem 'aws-ses', '~> 0.4.4', require: 'aws/ses'
 
 
 # Use Capistrano for deployment

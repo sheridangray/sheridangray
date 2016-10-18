@@ -31,5 +31,13 @@
         </p>
       </div>
     </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <%= Rails.application.secrets.AMAZON_ACCESS_KEY %><br>
+        <%= Rails.application.secrets.AMAZON_SECRET_KEY %><br>
+        <%= Rails.application.secrets.AMAZON_EMAIL_SERVER_REGION %><br>
+        <%= link_to 'Test Email', email_test_path %>
+      </div>
+    </div>
   </div>
 </div>

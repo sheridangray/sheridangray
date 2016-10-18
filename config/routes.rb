@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  
+
   # You can have the root of your site routed with "root"
   root 'static_pages#home'
 
@@ -12,6 +14,7 @@ Rails.application.routes.draw do
   # Static Pages
   get '/about', to: 'static_pages#about'
   get 'projects/', to: 'projects#index'
+  get 'email/test'
 
   # Resources 
 
