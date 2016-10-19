@@ -81,4 +81,16 @@ Rails.application.configure do
 
   # Use SES as the email delivery method.
   config.action_mailer.delivery_method = :ses
+
+  # Paperclip
+  config.paperclip_defaults = {
+    default_url: ActionController::Base.helpers.asset_path("/assets/default.png")
+    storage: :s3,
+    s3_credentials: {
+      bucket: ENV['S3_BUCKET_NAME'],
+      access_key_id: ENV['AMAZON_ACCESS_KEY'],
+      secret_access_key: ENV['AMAZON_SECRET_KEY'],
+      s3_region: ENV['AWS_REGION'],
+    }
+  }
 end

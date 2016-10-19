@@ -29,7 +29,9 @@ gem 'jasny-bootstrap-rails'
 
 gem 'devise'
 
+# Paperclip requirements
 gem 'paperclip'
+gem 'aws-sdk'
 
 gem 'momentjs-rails', '>= 2.9.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17.42'
@@ -42,6 +44,8 @@ gem 'puma'
 
 # Amazon Email
 gem 'aws-ses', '~> 0.4.4', require: 'aws/ses'
+
+
 
 
 # Use Capistrano for deployment

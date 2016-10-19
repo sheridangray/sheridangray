@@ -42,4 +42,9 @@ Rails.application.configure do
   # Action mailer per devise instructions
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
+  # Paperclip
+  config.paperclip_defaults = { 
+    default_url: ActionController::Base.helpers.asset_path("/assets/default.png")
+  }
+
 end

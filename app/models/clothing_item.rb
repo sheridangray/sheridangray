@@ -5,7 +5,17 @@ class ClothingItem < ActiveRecord::Base
   belongs_to :wardrobe
   belongs_to :clothing_type
 
-  has_attached_file :image, styles: { medium: "300x300" }, default_url: ActionController::Base.helpers.asset_path("default.png")
+  has_attached_file :image, 
+                    styles: { medium: "300x300" }
+                    # default_url: ActionController::Base.helpers.asset_path("default.png")
+                    # storage: :s3,
+                    # s3_credentials: {
+                    #   access_key_id: ENV["AMAZON_ACCESS_KEY"], 
+                    #   secret_access_key: ENV["AMAZON_SECRET_KEY"]
+                    # },
+                    # region: ENV["AWS_REGION"],
+                    # bucket: "sheridangray-production"
+
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
 
