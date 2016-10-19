@@ -22,15 +22,8 @@ test:
 
 production:
   <<: *default
-  database: <%= Rails.application.rds_database %>
-  username: <%= Rails.application.rds_username %>
-  password: <%= Rails.application.rds_password %>
-  rds_host: <%= Rails.application.rds_host %>
-  rds_port: <%= Rails.application.rds_port %>
-
-  # database: db/production.sqlite3
-  # database: <%= ENV['RDS_DB_NAME'] %>
-  # username: <%= ENV['RDS_USERNAME'] %>
-  # password: <%= ENV['RDS_PASSWORD'] %>
-  # host: <%= ENV['RDS_HOST'] %>
-  # port: <%= ENV['RDS_PORT'] %>
+  database: <%= ENV['RDS_DB_NAME'] %>
+  username: <%= ENV['RDS_USERNAME'] %>
+  password: <%= ENV['RDS_PASSWORD'] %>
+  host: <%= ENV['RDS_HOST'] %>
+  port: <%= ENV['RDS_PORT'] %>
