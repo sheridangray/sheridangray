@@ -11,11 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161013234034) do
+ActiveRecord::Schema.define(version: 20161019195206) do
 
   create_table "clothing_items", force: :cascade do |t|
-    t.integer  "wardrobe_id"
-    t.integer  "clothing_type_id"
     t.date     "purchased_on"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
@@ -24,6 +22,8 @@ ActiveRecord::Schema.define(version: 20161013234034) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "expected_months_to_expire"
+    t.integer  "wardrobe_id"
+    t.integer  "clothing_type_id"
   end
 
   add_index "clothing_items", ["clothing_type_id"], name: "index_clothing_items_on_clothing_type_id"
