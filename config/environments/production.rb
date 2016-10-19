@@ -84,7 +84,7 @@ Rails.application.configure do
 
   # Paperclip
   config.paperclip_defaults = {
-    default_url: ActionController::Base.helpers.asset_path("/public/assets/default.png"),
+    default_url: lambda { |image| ActionController::Base.helpers.asset_path('default.png') },
     storage: :s3,
     s3_credentials: {
       bucket: ENV['S3_BUCKET_NAME'],
