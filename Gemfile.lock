@@ -112,6 +112,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (~> 0.3.0)
+    pg (0.18.4)
     puma (3.6.0)
     rack (1.6.4)
     rack-test (0.6.3)
@@ -201,6 +202,7 @@ DEPENDENCIES
   jquery-rails
   momentjs-rails (>= 2.9.0)
   paperclip
+  pg (~> 0.18.1)
   puma
   rails (= 4.2.3)
   rb-readline
