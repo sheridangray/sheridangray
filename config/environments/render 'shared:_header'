@@ -1,0 +1,123 @@
+render 'shared/_header'
+
+# Are you ready? Make commonsense immigration reform a reality in 2017
+
+<form_for :signup_form>
+
+**FWD.us** is mobilizing the tech community in support of policies that keep  
+the American Dream achievable in the 21st century, starting with commonsense immigration reform.
+
+Thousands of people from across the country have joined the fight, from  
+grassroots supporters to our world-class technologist founders, including:
+
+<component_slider :supporters>
+
+[Learn more →](/about_us)
+
+***
+
+# Families, Economy, Jobs The Need for Reform
+
+## 11 Million in Limbo
+
+Number of undocumented immigrants living under threat of deportation without a pathway to citizenship.
+
+## $37 Million Lost Daily
+
+Amount of tax revenue our country loses every day without commonsense reform.
+
+## 3.22 Million Potential Jobs
+
+Number of American jobs that would be created if we passed immigration reform.
+
+[What we are fighting for](/about_reform)
+
+***
+
+# #Trump365 365 Days of Donald Trump's Mass Deportation Plan
+
+Republican presidential nominee Donald Trump has repeatedly promised to mass deport 11.4 million undocumented immigrants – as well as an additional 3.4 million U.S. citizen children of undocumented immigrants – if elected.
+
+Trump's inhumane and enormously expensive "plan" defies American values and would devastate American industries, communities, and economy. Explore what Trump's proposed inhumane and enormously expensive plan would mean for American industries, communities, and our economy.
+
+[Learn More](http://trump365.com)</div>
+
+***
+
+# Fight For Families Congress Must Act
+
+After the Supreme Court's ruling in U.S. v. Texas, now is the time for Congress to take action and pass immigration reform in 2017\. Our fight for families continues until we win. Join us.
+
+[Join the Fight](http://fwd.us/scotus)
+
+***
+
+# Get Involved Local Chapters
+
+From San Francisco to Austin, Miami to New York, FWD.us has enlisted thousands to roll up our sleeves, get engaged, and communicate to lawmakers the urgent need for immigration reform. Join our vibrant community through your local chapter.
+
+#### [Austin](/chapter_aus)
+
+#### [Boston](/chapter_bos)
+
+#### [Chicago](/chapter_chi)
+
+#### [Dallas](/chapter_dal)
+
+#### [Miami](/chapter_mia)
+
+#### [Los Angeles](/chapter_la)
+
+#### [New York](/chapter_nyc)
+
+#### [San Francisco](/chapter_sf)
+
+#### [Silicon Valley](/chapter_sv)
+
+***
+
+## America is BuiltByImmigrants Share your story
+
+Real lives hang in the balance while we wait for our broken immigration system to be fixed. Read the inspiring stories of people who stand to benefit from these policies and share your own immigration story in support of reform!
+
+[Share your story](http://app.fwd.us/stories/new) [Read inspiring stories](http://app.fwd.us/stories/discover)
+
+* [
+
+  <photo>
+
+  Cris Mercado
+
+  **Founder, GrantAnswers  
+  **Chris is DACA-expansion eligible  
+
+  _Education is why my parents brought me to this country when I was 6 years old. It is why I entered Ph.D. study at age 21._
+
+  Read My Story
+
+  ](http://app.fwd.us/stories/641)
+
+* [
+
+  <photo>
+
+  Juan Carlos
+
+  **Yale student
+  **Juan is a DACA beneficiary  
+
+  _Fourteen years ago, my family crossed the US-Mexico border in search of a better life. We moved to Dallas, where I grew up._
+
+  Read My Story
+
+  ](http://app.fwd.us/stories/107)
+
+***
+
+## <small>Join the Movement</small> Fight for Immigration Reform Today
+
+<form_for :signup_form>
+
+Your information is secure and will not be shared
+
+render 'shared/footer'
